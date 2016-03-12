@@ -29,7 +29,7 @@
 				<li><a href="news.html"><img src="https://github.com/lilydia/InStantRegions/blob/master/img/news.png?raw=true" width="90" height="90" border="0" />NEWS</a></li>
                 <li><a href="radio.html"><img src="https://github.com/lilydia/InStantRegions/blob/master/img/radio.png?raw=true" width="90" height="90" border="0" />RADIO</a></li>
                 <li><a href="events.html"><img src="https://github.com/lilydia/InStantRegions/blob/master/img/events.png?raw=true" width="90" height="90" border="0" />EVENTS</a></li>
-                <li><a href="city.html"><img src="img/https://github.com/lilydia/InStantRegions/blob/master/img/location.png?raw=true" width="90" height="90" border="0" />CITY</a></li>
+                <li><a href="city.html"><img src="https://github.com/lilydia/InStantRegions/blob/master/img/location.png?raw=true" width="90" height="90" border="0" />CITY</a></li>
 			</ul>
 			
 			<div id="banner">
@@ -40,7 +40,7 @@
 		
 		
 		<div id="chatBody">
-			<ul id="chatList">
+			<ul id="list">
 			</ul>
 			<a>Enter messages below:</a>
 			<input type="textbox" id="chatBox">
@@ -70,7 +70,7 @@
 			</div>
 			
 			<div id="radio">
-				<h2><img src="img/radio.png" width="90" height="90" border="0" />RADIO</h2>
+				<h2><img src="https://github.com/lilydia/InStantRegions/blob/master/img/radio.png?raw=true" width="90" height="90" border="0" />RADIO</h2>
 				<p>
 				Ever wonder what the local radio stations are? 
 				Well come have a look at the local radio stations. 
@@ -107,7 +107,7 @@
 				<h1>ABOUT US</h1>
 				
 				<div id="Alexia">
-				<h2><img src="img/Alexia.png" width="100" height="100" border="0" />Alexia Bernardo (Graphic Designer)</h2>
+				<h2><img src="https://github.com/lilydia/InStantRegions/blob/master/img/Alexia.png?raw=true" width="100" height="100" border="0" />Alexia Bernardo (Graphic Designer)</h2>
 				<p>
 				Hello! I am Alexia. I am a first year Game Design and Development student studying at the Rochester Institute of Technology.
 				I always had a love of games and creating things and just want to share it with everyone. 
@@ -118,6 +118,7 @@
 				<div id="Aidan">
 				<h2><img src="https://github.com/lilydia/InStantRegions/blob/master/img/Aidan.png?raw=true" width="100" height="100" border="0" />Aidan Klein (Backend Developer)</h2>
 				<p>
+				No Comments available.	
 				</p>
 				</div>
 				
@@ -141,6 +142,27 @@
 	</div>
 		
 
-	<script src="js/app.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("#add").click(function(){
+			addToList();
+			});
+			
+		$('#idea').keypress(function (e) {
+			if (e.which == 13) {
+				addToList();
+				return false;    //<---- Add this line
+				}
+				});
+				
+	function addToList(){
+		var idea=$("#idea");
+		var list=$("#list");
+		list.append("<li>" + idea.val() + "</li>");
+		idea.val("");
+		}
+		
+	});
+</script>
 </body>
 </html>
