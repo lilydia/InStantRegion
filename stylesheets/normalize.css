@@ -24,6 +24,11 @@ body {
 
 #chatBody {
 	max-height: 1000px;
+	margin: 100px 150px 100px 80px;
+}
+
+#develop {
+		margin: 100px 150px 100px 80px;
 }
 
 #chatList {
