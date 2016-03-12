@@ -28,7 +28,8 @@ body {
 }
 
 #develop {
-		margin: 100px 150px 100px 80px;
+	margin: 100px 150px 100px 80px;
+	padding-bottom: 100px;
 }
 
 #chatList {
